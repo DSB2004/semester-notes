@@ -1,0 +1,209 @@
+body {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+/*  WIDTH  */
+.__w__full {
+  width: 100%;
+}
+.__w__600 {
+  width: 600px;
+}
+.__w__400 {
+  width: 400px;
+}
+
+.__w__200 {
+  width: 200px;
+}
+
+/* TEXT FORMATING */
+.__text__left {
+  text-align: left;
+}
+
+/* GAP */
+.__gap__2 {
+  gap: 2px;
+}
+
+.__gap__4 {
+  gap: 4px;
+}
+
+.__gap__6 {
+  gap: 6px;
+}
+
+.__gap__8 {
+  gap: 8px;
+}
+
+.__gap__10 {
+  gap: 10px;
+}
+
+.__gap_12 {
+  gap: 12px;
+}
+/* FLEX BOX */
+
+.__flex__1 {
+  flex-grow: 1;
+}
+.__flex__evenly {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.__flex__between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.__flex__col {
+  flex-direction: column;
+}
+/* === WIDTH === */
+.__w__100 {
+  width: 100px;
+}
+.__w__300 {
+  width: 300px;
+}
+.__w__800 {
+  width: 800px;
+}
+
+/* === PADDING === */
+.__p__4 {
+  padding: 4px;
+}
+.__p__8 {
+  padding: 8px;
+}
+.__p__16 {
+  padding: 16px;
+}
+.__px__8 {
+  padding-left: 8px;
+  padding-right: 8px;
+}
+.__py__8 {
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+/* === MARGIN === */
+.__m__4 {
+  margin: 4px;
+}
+.__m__8 {
+  margin: 8px;
+}
+.__mx__8 {
+  margin-left: 8px;
+  margin-right: 8px;
+}
+.__my__8 {
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+/* === TEXT === */
+.__text__center {
+  text-align: center;
+}
+.__text__right {
+  text-align: right;
+}
+.__text__bold {
+  font-weight: bold;
+}
+.__text__small {
+  font-size: 0.8rem;
+}
+.__text__large {
+  font-size: 1.25rem;
+}
+
+/* === FLEX === */
+.__flex {
+  display: flex;
+}
+.__flex__col {
+  flex-direction: column;
+}
+.__flex__wrap {
+  flex-wrap: wrap;
+}
+.__items__center {
+  align-items: center;
+}
+.__justify__center {
+  justify-content: center;
+}
+.__justify__start {
+  justify-content: flex-start;
+}
+.__justify__end {
+  justify-content: flex-end;
+}
+/* === BORDER === */
+.__border {
+  border: 1px solid #ccc;
+}
+.__border__top {
+  border-top: 1px solid #ccc;
+}
+.__border__bottom {
+  border-bottom: 1px solid #ccc;
+}
+.__rounded {
+  border-radius: 4px;
+}
+.__rounded__lg {
+  border-radius: 12px;
+}
+
+/* === BACKGROUND === */
+.__bg__light {
+  background-color: #f9f9f9;
+}
+.__bg__dark {
+  background-color: #333;
+  color: white;
+}
+.__bg__primary {
+  background-color: #007bff;
+  color: white;
+}
+.__bg__muted {
+  background-color: #f0f0f0;
+}
+
+.__bg__muted__light {
+  background-color: #f5f5f5;
+}
+
+/* === DISPLAY === */
+.__block {
+  display: block;
+}
+.__inline__block {
+  display: inline-block;
+}
+.__hidden {
+  display: none;
+}
+
+/* === HTML === */
+
+button {
+  border: none !important;
+}
+
+dialog::backdrop {
+  background-color: rgba(0, 0, 0, 0.6); /* semi-transparent black */
+}

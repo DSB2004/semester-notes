@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <main class="__flex__evenly">
+      <!-- USER HEADER -->
+      <section class="__flex__evenly __flex__col __flex__1">
+        <header class="__flex__between __w__full">
+          <h1>Welcome</h1>
+
+          <butto style="font-weight: 700;" 
+          id="__add__user__button" 
+          class="__p__8 __bg__primary">Add More User</button>
+        </header>
+        
+        <!-- USER TABLE FORMAT -->
+        <article class="__w__full">
+          <table id="__user_table">
+            <thead class="__w__600 __flex__evenly __p__8 __bg__muted">
+              <th class="__w__200 __text__left">Name</th>
+              <th class="__w__200 __text__left">Email</th>
+              <th class="__w__200 __text__left">Phone Number</th>
+            </thead>
+
+            <tbody
+            id="__user__table__body"
+            class="__flex__evenly __gap__10 __py__8 __flex__col"
+            ></tbody>
+          </table>
+          <!-- USER TABLE FORMAT -->
+        </article>
+
+      </section>
+    </main>
+    <dialog
+    class="__dialog __p__16" id="__add__user__dialog">
+      <h4>Add More Users</h4>
+      <form
+      style="border-radius: 10px;" 
+      action="" 
+      id="__create___user__form"
+      class="__flex__evenly __flex__col __gap__10 ">
+
+        <input class="__w__400 __p__8" placeholder="Enter your name..."
+        style="font-size:16px;" type="text" name="name">
+        <input class="__w__400 __p__8"
+        placeholder="Enter your email..."
+        style="font-size:16px;" type="text" name="email">
+        <input class="__w__400 __p__8"
+        placeholder="Enter your phone..."
+        style="font-size:16px;" type="text" name="phone">
+      
+        <div class="__flex__evenly __gap__10 "> 
+
+          <button class="__bg__primary __p__8" style="font-weight: 600;">
+            Submit
+          </button>
+             <button 
+             id="__cancel__button"
+             type="button"
+             class="__bg__muted __p__8" style="font-weight: 600;">
+            Cancel
+          </button>
+          
+        </div>
+      </form>
+
+    </dialog>
+  </body>
+  <script src="./script.js"></script>
+  <script>
+    getUser();
+    </script>
+</html>
