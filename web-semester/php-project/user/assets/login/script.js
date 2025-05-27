@@ -1,0 +1,35 @@
+const ACCOUNT_FORM = document.getElementById("__login__account__form");
+const ACCOUNT_FORM_MESSAGE = document.getElementById(
+  "__login__account__form__p"
+);
+
+ACCOUNT_FORM.onsubmit = (e) => {
+  e.preventDefault();
+  const formdata = new FormData(e.target);
+
+  fetch("/user/api/auth/login/", {
+    method: "POST",
+    body: formdata,
+  })
+    .then((res) => res.text())
+    .then((xmlText) => {
+      const parser = new DOMParser();
+      const xmlDoc = parser.parseFromString(xmlText, "application/xml");
+
+      const status = xmlDoc.getElementsByTagName("status")[0]?.textContent;
+      const message = xmlDoc.getElementsByTagName("message")[0]?.textContent;
+
+      if (status === "success") {
+        ACCOUNT_FORM_MESSAGE.style.color = "green";
+        window.location.href = "/user/page/dashboard";
+      } else {
+        ACCOUNT_FORM_MESSAGE.style.color = "red";
+      }
+      ACCOUNT_FORM_MESSAGE.textContent = message || "Unknown response";
+    })
+    .catch((err) => {
+      console.error(err);
+      ACCOUNT_FORM_MESSAGE.textContent = "Network error";
+      ACCOUNT_FORM_MESSAGE.style.color = "red";
+    });
+};

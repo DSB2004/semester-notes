@@ -1,0 +1,15 @@
+RewriteEngine On
+
+# Allow .htaccess to work in subfolders
+Options +FollowSymLinks
+RewriteBase /
+
+# Exclude /api and subpaths under /api from being rewritten
+RewriteCond %{REQUEST_URI} !^/api
+
+# If the requested filename is not a file and not a directory, rewrite to /page/something/index.php
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Redirect /user/login to /page/login/index.php, or any similar path to /page/anything/index.php
+RewriteRule ^([a-zA-Z0-9_-]+)$ page/$1/index.php [L,QSA]
